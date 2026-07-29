@@ -1,5 +1,5 @@
 import logging
-from typing import Collection
+from collections.abc import Collection
 
 import requests
 
@@ -39,9 +39,8 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
             logger.warning(f"Connection error for URL: {url}")
         except requests.exceptions.RequestException as e:
             status = f"REQUEST_ERROR: {type(e).__name__}"
-            logger.error(
-                f"An unexpected error occurred for {url}: {e}",
-                exc_info=True,
+            logger.exception(
+                f"An unexpected error occurred for {url}:",
             )
 
         results[url] = status

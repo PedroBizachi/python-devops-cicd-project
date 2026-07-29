@@ -1,5 +1,5 @@
 import logging
-from typing import Collection
+from collections.abc import Collection
 
 import click
 
