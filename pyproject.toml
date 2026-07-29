@@ -13,5 +13,11 @@ dependencies = [
     "requests>=2.28,<3.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "black",
+]
+
 [project.scripts]
 check-urls = "simple_http_checker.cli:main"

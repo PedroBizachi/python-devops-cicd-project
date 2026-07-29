@@ -1,0 +1,17 @@
+{
+  "tools": {
+    "python": {
+      "formatters": ["black"],
+      "linters": ["ruff", "mypy"],
+      "format_on_save": true
+    }
+  },
+  "lsp": {
+    "basedpyright": {
+      "enabled": false
+    },
+    "mypy": {
+      "enabled": true
+    }
+  }
+}
