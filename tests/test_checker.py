@@ -22,18 +22,18 @@ def test_check_urls_success(mocker: MockFixture):
 
 
 def test_check_urls_client_error(mocker: MockFixture):
-    mock_resquests_get = mocker.patch("simple_http_checker.checker.requests.get")
+    mock_requests_get = mocker.patch("simple_http_checker.checker.requests.get")
 
     mock_response = mocker.MagicMock(spec=requests.Response)
     mock_response.ok = False
     mock_response.status_code = 404
     mock_response.reason = "NOT FOUND"
-    mock_resquests_get.return_value = mock_response
+    mock_requests_get.return_value = mock_response
 
     urls = ["https://example.com/non-existent"]
     results = check_urls(urls)
 
-    mock_resquests_get.assert_called_once_with(urls[0], timeout=5)
+    mock_requests_get.assert_called_once_with(urls[0], timeout=5)
     assert results[urls[0]] == "404 NOT FOUND"
 
 
@@ -50,13 +50,13 @@ def test_check_urls_response_exceptions(
     error_exception: type[requests.exceptions.RequestException],
     expected_status: str,
 ):
-    mock_resquests_get = mocker.patch("simple_http_checker.checker.requests.get")
-    mock_resquests_get.side_effect = error_exception(f"Simulated {expected_status}")
+    mock_requests_get = mocker.patch("simple_http_checker.checker.requests.get")
+    mock_requests_get.side_effect = error_exception(f"Simulated {expected_status}")
 
     urls = ["https://problem.com"]
     results = check_urls(urls)
 
-    mock_resquests_get.assert_called_once_with(urls[0], timeout=5)
+    mock_requests_get.assert_called_once_with(urls[0], timeout=5)
     assert results[urls[0]] == expected_status
 
 
@@ -100,18 +100,18 @@ def test_check_urls_empty_list():
 
 
 def test_check_urls_custom_timeout(mocker: MockFixture):
-    mock_resquests_get = mocker.patch("simple_http_checker.checker.requests.get")
+    mock_requests_get = mocker.patch("simple_http_checker.checker.requests.get")
 
     mock_response = mocker.MagicMock(spec=requests.Response)
     mock_response.ok = True
     mock_response.status_code = 200
     mock_response.reason = "OK"
-    mock_resquests_get.return_value = mock_response
+    mock_requests_get.return_value = mock_response
 
     urls = ["https://example.com"]
     custom_timeout = 10
     results = check_urls(urls, timeout=custom_timeout)
 
-    mock_resquests_get.assert_called_once_with(urls[0], timeout=custom_timeout)
+    mock_requests_get.assert_called_once_with(urls[0], timeout=custom_timeout)
 
     assert results[urls[0]] == "200 OK"
