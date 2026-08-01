@@ -9,7 +9,7 @@ def test_no_urls():
     result = runner.invoke(main, [])
 
     assert result.exit_code == 0
-    assert "Usage: check_urls" in result.output
+    assert "Usage: check-urls" in result.output
 
 
 def test_main_single_url_success(mocker: MockFixture):
