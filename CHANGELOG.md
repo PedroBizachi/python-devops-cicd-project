@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.1 (2026-08-03)
+
+### Bug Fixes
+
+- **python-cicd**: Use correct project name
+  ([`433aaa3`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/433aaa341a7a496d965090350aa61b8b90054254))
+
+
 ## v1.1.0 (2026-08-03)
 
 ### Features
