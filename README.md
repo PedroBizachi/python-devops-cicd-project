@@ -8,7 +8,7 @@ and prints their HTTP status.
 
 ## Workflow
 
-![workflow-overview](src/media/workflow-overview.png)
+![workflow-overview](public/media/workflow-overview.png)
 
 ## What we will implement in this repository
 
