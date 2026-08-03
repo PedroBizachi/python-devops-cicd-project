@@ -15,4 +15,4 @@ This repo contains the code for the CI/CD section of my Python for DevOps course
 - [x] Add typing (mypy) and security checks (bandit)
 - [x] Add test automation
 - [x] Build our Python project
-- [ ] Publish the project to both TestPyPI and PyPI when a new release is published
+- [x] Publish the project to both TestPyPI and PyPI when a new release is published
