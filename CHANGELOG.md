@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.2 (2026-08-03)
+
+### Bug Fixes
+
+- **python-cicd**: Use correct publish config to PyPI
+  ([`7939b5b`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/7939b5b7fdec184a07c5685449ffe39d0358a10f))
+
+
 ## v1.1.1 (2026-08-03)
 
 ### Bug Fixes
