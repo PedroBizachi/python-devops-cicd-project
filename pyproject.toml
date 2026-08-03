@@ -9,6 +9,21 @@ description = "A simple CLI tool to check the status of URLs."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = ["click>=8.0,<9.0", "requests>=2.28,<3.0"]
+authors = [{ name = "Pedro Lima" }, { email = "bizak.dev@outlook.com" }]
+license = { text = "MIT" }
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Natural Language :: Portuguese (Brazilian)",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+homepage = "https://github.com/PedroBizachi/python-devops-cicd-project"
 
 [project.optional-dependencies]
 # Run `pip install .[dev]` to install newer dev dependencies
