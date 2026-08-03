@@ -1,3 +1,6 @@
+# Writing Guide
+# https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
+
 [build-system]
 requires = ["setuptools>=77.0"]
 build-backend = "setuptools.build_meta"
@@ -23,7 +26,13 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-homepage = "https://github.com/PedroBizachi/python-devops-cicd-project"
+
+[project.urls]
+Homepage = "https://github.com/PedroBizachi/python-devops-cicd-project"
+Documentation = "https://github.com/lm-academy/python-devops-cicd-project/blob/main/README.md"
+Repository = "https://github.com/PedroBizachi/python-devops-cicd-project"
+Issues = "https://github.com/PedroBizachi/python-devops-cicd-project/issues"
+Changelog = "https://github.com/PedroBizachi/python-devops-cicd-project/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 # Run `pip install .[dev]` to install newer dev dependencies
