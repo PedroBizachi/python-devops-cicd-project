@@ -32,13 +32,11 @@ def main(urls: Collection[str], timeout: int, verbose: bool):
         click.echo("Usage: check-urls <url1> <url2> ...")
         return
 
-    logger.info(f"Starting check for {len(urls)} URLs...")
-
     results = check_urls(urls, timeout)
 
     click.echo("\n --- Results ---")
     for url, status in results.items():
-        if "OK" in status:
+        if status.endswith("OK"):
             fg_color = "green"
         else:
             fg_color = "red"

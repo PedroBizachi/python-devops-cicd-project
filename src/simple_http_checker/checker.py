@@ -10,20 +10,21 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
     """Checks a list of urls and returns their status.
 
     Args:
-        urls (list[str]): A list of URLs to check.
+        urls (Collection[str]): A collection of URLs to check.
         timeout (int, optional): The timeout in seconds for each URL check. Defaults to 5.
 
     Returns:
         dict[str, str]: A dictionary mapping URLs to their status.
     """
 
+    url_count = len(urls)
+    url_context = "URL" if url_count == 1 else "URLs"
     logger.info(
-        f"Starting check for {len(urls)} URLs with a timeout of {timeout} seconds."
+        f"Starting check for {url_count} {url_context} with a timeout of {timeout} seconds."
     )
 
     results: dict[str, str] = {}
     for url in urls:
-        status = "UNKNOWN"
         try:
             logger.debug(f"Checking URL: {url}")
             response = requests.get(url, timeout=timeout)
@@ -39,7 +40,7 @@ def check_urls(urls: Collection[str], timeout: int = 5) -> dict[str, str]:
             logger.warning(f"Connection error for URL: {url}")
         except requests.exceptions.RequestException as e:
             status = f"REQUEST_ERROR: {type(e).__name__}"
-            logger.exception(
+            logger.error(
                 f"An unexpected error occurred for {url}:",
             )
 
