@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.3 (2026-08-03)
+
+### Bug Fixes
+
+- **chore**: Improved README
+  ([`b77a9cf`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/b77a9cf149e5862f54f3b3cbe05f7aab4c8a71e5))
+
+
 ## v1.1.2 (2026-08-03)
 
 ### Bug Fixes
