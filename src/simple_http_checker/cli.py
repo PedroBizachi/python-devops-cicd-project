@@ -1,42 +1,21 @@
 import logging
 from collections.abc import Collection
-from typing import ClassVar
 
 import click
+from rich.logging import RichHandler
 
 from simple_http_checker.checker import check_urls
 
-
-class ColoredLevelFormatter(logging.Formatter):
-    LEVEL_COLORS: ClassVar[dict[int, str]] = {
-        logging.DEBUG: "cyan",
-        logging.INFO: "green",
-        logging.WARNING: "yellow",
-        logging.ERROR: "red",
-        logging.CRITICAL: "magenta",
-    }
-
-    def format(self, record: logging.LogRecord) -> str:
-        original_levelname = record.levelname
-        color = self.LEVEL_COLORS.get(record.levelno)
-        if color:
-            record.levelname = click.style(record.levelname, fg=color)
-
-        try:
-            return super().format(record)
-        finally:
-            record.levelname = original_levelname
-
-
-handler = logging.StreamHandler()
-handler.setFormatter(
-    ColoredLevelFormatter(
-        fmt="[%(asctime)s] %(levelname)s: %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[
+        RichHandler(
+            show_path=False,
+        )
+    ],
 )
-
-logging.basicConfig(level=logging.INFO, handlers=[handler])
 
 logger = logging.getLogger(__name__)
 
