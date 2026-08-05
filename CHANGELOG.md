@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.3.1 (2026-08-05)
+
+### Bug Fixes
+
+- **docs**: Corrected supported Python versions
+  ([`90fc2ae`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/90fc2ae99b15d67d46fcf0cf325f9ccb8d3e1453))
+
+
 ## v1.3.0 (2026-08-05)
 
 ### Bug Fixes
