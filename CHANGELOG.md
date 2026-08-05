@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v1.3.0 (2026-08-05)
+
+### Bug Fixes
+
+- **docs**: Fix md link to media on README [skip ci]
+  ([`45263d7`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/45263d788d4ae0a065fa2a2747ebf282ebd29a6d))
+
+- **pyproject**: Correct link to documentation
+  ([`905bcf9`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/905bcf9ded4c0a768b04bd0f7a944874188c1efd))
+
+### Features
+
+- **docs**: Added tags to README
+  ([`313b84c`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/313b84c121f62c8e49bb8a4eae515591e63c34fc))
+
+- **logging**: Enhanced logging coloring
+  ([`79f4bc0`](https://github.com/PedroBizachi/python-devops-cicd-project/commit/79f4bc0e5238d8a5e295de92e825019b3fda479f))
+
+
 ## v1.2.0 (2026-08-03)
 
 ### Bug Fixes
