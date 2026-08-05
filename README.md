@@ -1,3 +1,9 @@
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/simple-http-checker-PedroLima)](https://pypi.org/project/simple-http-checker-PedroLima/)
+[![PyPI version](https://img.shields.io/pypi/v/simple-http-checker-PedroLima)](https://pypi.org/project/simple-http-checker-PedroLima/)
+[![Downloads](https://pepy.tech/badge/simple-http-checker-PedroLima/month)](https://pepy.tech/project/simple-http-checker-PedroLima)
+[![CI/CD](https://github.com/PedroBizachi/python-devops-cicd-project/actions/workflows/python-ci.yaml/badge.svg)](https://github.com/PedroBizachi/python-devops-cicd-project/actions/workflows/python-ci.yaml)
+[![Publish](https://github.com/PedroBizachi/python-devops-cicd-project/actions/workflows/publish.yaml/badge.svg)](https://github.com/PedroBizachi/python-devops-cicd-project/actions/workflows/publish.yaml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # Python for DevOps: CI/CD for Python Projects
 
