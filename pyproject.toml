@@ -29,7 +29,7 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://github.com/PedroBizachi/python-devops-cicd-project"
-Documentation = "https://github.com/lm-academy/python-devops-cicd-project/blob/main/README.md"
+Documentation = "https://github.com/PedroBizachi/python-devops-cicd-project/blob/main/README.md"
 Repository = "https://github.com/PedroBizachi/python-devops-cicd-project"
 Issues = "https://github.com/PedroBizachi/python-devops-cicd-project/issues"
 Changelog = "https://github.com/PedroBizachi/python-devops-cicd-project/blob/main/CHANGELOG.md"
