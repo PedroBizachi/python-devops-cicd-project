@@ -107,4 +107,4 @@ pytest
 
 - Package name: `simple-http-checker-PedroLima`
 - CLI command: `check-urls`
-- Python version: `>=3.9`
+- Python version: `3.9 <= version <= 3.12`
